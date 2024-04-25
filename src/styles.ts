@@ -235,26 +235,58 @@ export const Footer = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  padding: 12px;
   margin-top: 44px;
+  padding-bottom: 12px;
   background-color: #320000;
   h1 {
     color: #fff;
     font-weight: 700;
     font-size: 16px;
   }
-  p {
+  a {
+    margin-top: 6px;
     color: #fff;
     font-weight: 400;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
+  }
+  p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
   }
 `;
 
-export const Icon = styled(FontAwesomeIcon)<{ isInstagram?: boolean }>`
+export const Icon = styled(FontAwesomeIcon)`
   color: #fff;
   width: 24px;
   height: 24px;
   cursor: pointer;
-  margin-left: ${({ isInstagram }) => (isInstagram ? '12px' : '0')};
+`;
+
+export const FooterRights = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #5d2417;
+  p {
+    margin-left: 24px;
+    margin-right: 24px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+  }
+`;
+
+export const ContactDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  a {
+    display: flex;
+    align-items: center;
+  }
+  p {
+    margin-left: 12px;
+  }
 `;

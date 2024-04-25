@@ -24,12 +24,15 @@ import {
   Button,
   Footer,
   Icon,
+  FooterRights,
+  ContactDiv,
 } from './styles';
 import Logo from './images/logo.svg';
 import Background from './images/image-background.jpg';
 import ImageAdrian from './images/image-adrian.jpg';
 import { useState } from 'react';
-import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,6 +48,11 @@ function App() {
   function handleClick() {
     const url =
       'https://api.whatsapp.com/send?phone=554232237728&text=Ol%C3%A1,%20localizei%20o%20contato%20atrav%C3%A9s%20do%20site.%20Podemos%20conversar%3F';
+    window.open(url, '_blank');
+  }
+
+  function goToLinkedin() {
+    const url = 'https://www.linkedin.com/in/adrianmajinskimoraes/';
     window.open(url, '_blank');
   }
 
@@ -87,7 +95,7 @@ function App() {
           <br /> Uma nova advocacia.
         </p>
       </BackgroundImage>
-      <Section>
+      <Section id="sobre-nos">
         <Title>SOBRE NÓS</Title>
         <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -102,7 +110,7 @@ function App() {
         </Text>
         <Line />
       </Section>
-      <Section>
+      <Section id="areas-de-atuacao">
         <Title>ÁREAS DE ATUAÇÃO</Title>
         <CardsDiv>
           <Card>
@@ -128,7 +136,7 @@ function App() {
         </CardsDiv>
         <Line />
       </Section>
-      <Section>
+      <Section id="equipe">
         <Title>EQUIPE</Title>
         <div style={{ display: 'flex', marginRight: 'auto' }}>
           <img src={ImageAdrian} alt="" />
@@ -146,7 +154,7 @@ function App() {
         </div>
         <Line />
       </Section>
-      <Section>
+      <Section id="contato">
         <Title>ENTRE EM CONTATO</Title>
         <ContactCard>
           <Label>Nome</Label>
@@ -163,25 +171,41 @@ function App() {
         </ContactCard>
       </Section>
       <Footer>
-        <div>
+        <ContactDiv>
           <h1>MENU</h1>
-          <p>Sobre nós</p>
-          <p>Áreas de atuação</p>
-          <p>Equipe</p>
-          <p>Contato</p>
-        </div>
-        <div>
+          <a href="#sobre-nos">Sobre nós</a>
+          <a href="#areas-de-atuacao">Áreas de atuação</a>
+          <a href="#equipe">Equipe</a>
+          <a href="#contato">Contato</a>
+        </ContactDiv>
+        <ContactDiv>
           <h1>CONTATO</h1>
-          <p>(42) 3223-7728</p>
-          <p>adrianmanjinski@gmail.com</p>
-          <Icon icon={faLinkedin} />
-          <Icon icon={faInstagram} isInstagram />
-        </div>
+          <a href="tel:4232237728">
+            <Icon icon={faPhone} />
+            <p>(42) 3223-7728</p>
+          </a>
+          <a href="mailto:adrianmanjinski@gmail.com">
+            <Icon icon={faEnvelope} />
+            <p>adrianmanjinski@gmail.com</p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/adrianmajinskimoraes/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Icon icon={faLinkedin} onClick={goToLinkedin} />
+            <p>/adrianmajinskimoraes</p>
+          </a>
+        </ContactDiv>
         <div>
           <h1>ENDEREÇO</h1>
           <p>Ponta Grossa - PR</p>
         </div>
       </Footer>
+      <FooterRights>
+        <p>© Moraes Advogados Associados 2024. Todos os direitos reservados</p>
+        <p>Desenvolvido por Maria Eduarda Freitas</p>
+      </FooterRights>
     </div>
   );
 }
