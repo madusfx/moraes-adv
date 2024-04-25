@@ -113,3 +113,28 @@ export const BackgroundImage = styled.div`
     transform: translate(-50%, -50%);
   }
 `;
+
+export const Section = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 64px;
+  margin-right: 64px;
+`;
+
+export const Title = styled.p`
+  text-align: right;
+  margin-right: auto;
+  color: #320000;
+  font-weight: 700;
+  font-size: 24px;
+`;
+
+export const Text = styled.p``;
+
+export const Line = styled.div`
+  margin-top: 36px;
+  width: 30%;
+  height: 2px;
+  background-color: #320000;
+`;
