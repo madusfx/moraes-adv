@@ -17,6 +17,11 @@ import {
   CardsDiv,
   TextName,
   TextBiography,
+  ContactCard,
+  Input,
+  Label,
+  TextArea,
+  Button,
 } from './styles';
 import Logo from './images/logo.svg';
 import Background from './images/image-background.jpg';
@@ -137,6 +142,22 @@ function App() {
           </div>
         </div>
         <Line />
+      </Section>
+      <Section>
+        <Title>ENTRE EM CONTATO</Title>
+        <ContactCard>
+          <Label>Nome</Label>
+          <Input placeholder="Digite seu nome" type="text" />
+          <Label>Telefone</Label>
+          <Input placeholder="Digite seu telefone" type="number" />
+          <Label>E-mail</Label>
+          <Input placeholder="Digite seu e-mail" type="email" />
+          <Label>Mensagem</Label>
+          <TextArea placeholder="Digite sua mensagem" />
+          <Button>
+            <p>ENVIAR</p>
+          </Button>
+        </ContactCard>
       </Section>
     </div>
   );

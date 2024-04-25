@@ -181,3 +181,50 @@ export const Card = styled.div`
     text-align: center;
   }
 `;
+
+export const ContactCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  background-color: #320000;
+  padding: 32px;
+  border-radius: 8px;
+`;
+
+export const Label = styled.p`
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: auto;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 12px;
+`;
+
+export const TextArea = styled.textarea`
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 12px;
+  height: 80px;
+`;
+
+export const Button = styled.button`
+  width: 40%;
+  margin-top: 24px;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  p {
+    color: #320000;
+    font-weight: 700;
+    font-size: 18px;
+  }
+`;
