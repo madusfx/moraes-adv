@@ -15,9 +15,12 @@ import {
   Title,
   Card,
   CardsDiv,
+  TextName,
+  TextBiography,
 } from './styles';
 import Logo from './images/logo.svg';
 import Background from './images/image-background.jpg';
+import ImageAdrian from './images/image-adrian.jpg';
 import { useState } from 'react';
 
 function App() {
@@ -115,6 +118,24 @@ function App() {
             <p>RECUPERAÇÃO DE CRÉDITO</p>
           </Card>
         </CardsDiv>
+        <Line />
+      </Section>
+      <Section>
+        <Title>EQUIPE</Title>
+        <div style={{ display: 'flex', marginRight: 'auto' }}>
+          <img src={ImageAdrian} alt="" />
+          <div>
+            <TextName>
+              Adrian Vinicius Majinski de Moraes - Advogado OAB/PR 123.327{' '}
+            </TextName>
+            <TextBiography>
+              Advogado, graduado em direito pela
+              <br /> Universidade Estadual de Ponta Grossa,
+              <br /> com anos de experiência em advocacia
+              <br /> cível e empresarial.
+            </TextBiography>
+          </div>
+        </div>
         <Line />
       </Section>
     </div>

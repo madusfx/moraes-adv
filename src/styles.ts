@@ -120,6 +120,9 @@ export const Section = styled.div`
   align-items: center;
   margin-left: 64px;
   margin-right: 64px;
+  img {
+    margin-right: auto;
+  }
 `;
 
 export const Title = styled.p`
@@ -131,6 +134,20 @@ export const Title = styled.p`
 `;
 
 export const Text = styled.p``;
+
+export const TextName = styled.p`
+  margin-left: 24px;
+  color: #320000;
+  font-weight: 700;
+  font-size: 16px;
+`;
+
+export const TextBiography = styled.p`
+  color: #320000;
+  margin-left: 24px;
+  font-size: 16px;
+  font-weight: 400;
+`;
 
 export const Line = styled.div`
   margin-top: 36px;
