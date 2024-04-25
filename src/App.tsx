@@ -22,11 +22,14 @@ import {
   Label,
   TextArea,
   Button,
+  Footer,
+  Icon,
 } from './styles';
 import Logo from './images/logo.svg';
 import Background from './images/image-background.jpg';
 import ImageAdrian from './images/image-adrian.jpg';
 import { useState } from 'react';
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -159,6 +162,26 @@ function App() {
           </Button>
         </ContactCard>
       </Section>
+      <Footer>
+        <div>
+          <h1>MENU</h1>
+          <p>Sobre nós</p>
+          <p>Áreas de atuação</p>
+          <p>Equipe</p>
+          <p>Contato</p>
+        </div>
+        <div>
+          <h1>CONTATO</h1>
+          <p>(42) 3223-7728</p>
+          <p>adrianmanjinski@gmail.com</p>
+          <Icon icon={faLinkedin} />
+          <Icon icon={faInstagram} isInstagram />
+        </div>
+        <div>
+          <h1>ENDEREÇO</h1>
+          <p>Ponta Grossa - PR</p>
+        </div>
+      </Footer>
     </div>
   );
 }

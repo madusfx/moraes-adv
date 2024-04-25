@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
 export const Header = styled.div`
@@ -47,6 +48,7 @@ export const HamburguerMenu = styled.div<{ open?: boolean }>`
   display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
+  cursor: pointer;
   div {
     width: 2rem;
     height: 0.25rem;
@@ -227,4 +229,32 @@ export const Button = styled.button`
     font-weight: 700;
     font-size: 18px;
   }
+`;
+
+export const Footer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 12px;
+  margin-top: 44px;
+  background-color: #320000;
+  h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+  }
+`;
+
+export const Icon = styled(FontAwesomeIcon)<{ isInstagram?: boolean }>`
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: ${({ isInstagram }) => (isInstagram ? '12px' : '0')};
 `;
