@@ -13,6 +13,8 @@ import {
   Text,
   TextMenu,
   Title,
+  Card,
+  CardsDiv,
 } from './styles';
 import Logo from './images/logo.svg';
 import Background from './images/image-background.jpg';
@@ -87,6 +89,32 @@ function App() {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </Text>
+        <Line />
+      </Section>
+      <Section>
+        <Title>ÁREAS DE ATUAÇÃO</Title>
+        <CardsDiv>
+          <Card>
+            <p>CIVIL</p>
+          </Card>
+          <Card>
+            <p>EMPRESARIAL</p>
+          </Card>
+          <Card>
+            <p>TRABALHISTA</p>
+          </Card>
+        </CardsDiv>
+        <CardsDiv>
+          <Card>
+            <p>BANCÁRIO</p>
+          </Card>
+          <Card>
+            <p>IMOBILIÁRIO</p>
+          </Card>
+          <Card>
+            <p>RECUPERAÇÃO DE CRÉDITO</p>
+          </Card>
+        </CardsDiv>
         <Line />
       </Section>
     </div>

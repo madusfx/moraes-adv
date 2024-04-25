@@ -138,3 +138,29 @@ export const Line = styled.div`
   height: 2px;
   background-color: #320000;
 `;
+
+export const CardsDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const Card = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px;
+  width: 190px;
+  height: 90px;
+  background-color: #320000;
+  border-radius: 8px;
+  &:hover {
+    transition: all 0.3s linear;
+    transform: scale(1.1);
+  }
+  p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+  }
+`;
