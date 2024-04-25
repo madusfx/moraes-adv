@@ -94,3 +94,22 @@ export const ListItem = styled.li`
   text-align: center;
   list-style-type: none;
 `;
+
+export const BackgroundImage = styled.div`
+  position: relative;
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  p {
+    position: absolute;
+    text-align: center;
+    color: #320000;
+    font-weight: 900;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+`;

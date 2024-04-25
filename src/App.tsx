@@ -1,4 +1,5 @@
 import {
+  BackgroundImage,
   Contact,
   ContactText,
   HamburguerMenu,
@@ -10,6 +11,7 @@ import {
   TextMenu,
 } from './styles';
 import Logo from './images/logo.svg';
+import Background from './images/image-background.jpg';
 import { useState } from 'react';
 
 function App() {
@@ -60,6 +62,14 @@ function App() {
           </List>
         </Menu>
       )}
+      <BackgroundImage>
+        <img src={Background} alt="" />
+        <p>
+          Uma nova marca.
+          <br /> Um novo escritório.
+          <br /> Uma nova advocacia.
+        </p>
+      </BackgroundImage>
     </div>
   );
 }
