@@ -101,6 +101,7 @@ export const BackgroundImage = styled.div`
   position: relative;
   width: 100%;
   img {
+    margin-top: 60px;
     width: 100%;
     height: auto;
     display: block;
@@ -224,6 +225,7 @@ export const Button = styled.button`
   background-color: #fff;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
   p {
     color: #320000;
     font-weight: 700;

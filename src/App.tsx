@@ -15,8 +15,6 @@ import {
   Title,
   Card,
   CardsDiv,
-  TextName,
-  TextBiography,
   ContactCard,
   Input,
   Label,
@@ -29,9 +27,7 @@ import {
 } from './styles';
 import Logo from './images/logo.svg';
 import Background from './images/image-background.jpg';
-import ImageAdrian from './images/image-adrian.jpg';
 import { useState } from 'react';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
@@ -51,16 +47,21 @@ function App() {
     window.open(url, '_blank');
   }
 
-  function goToLinkedin() {
-    const url = 'https://www.linkedin.com/in/adrianmajinskimoraes/';
-    window.open(url, '_blank');
-  }
-
   return (
-    <div className="App">
-      <div style={{ display: 'flex' }}>
+    <div id="header" className="App">
+      <div
+        style={{
+          display: 'flex',
+          position: 'fixed',
+          top: '0',
+          width: '100%',
+          zIndex: '1',
+        }}
+      >
         <Header>
-          <img src={Logo} alt="Logo da advocacia" />
+          <a href="#header">
+            <img src={Logo} alt="Logo da advocacia" />
+          </a>
           <MenuDiv>
             <TextMenu>MENU</TextMenu>
             <HamburguerMenu open={menuOpen} onClick={handleMenuOpen}>
@@ -136,36 +137,33 @@ function App() {
         </CardsDiv>
         <Line />
       </Section>
-      <Section id="equipe">
-        <Title>EQUIPE</Title>
-        <div style={{ display: 'flex', marginRight: 'auto' }}>
-          <img src={ImageAdrian} alt="" />
-          <div>
-            <TextName>
-              Adrian Vinicius Majinski de Moraes - Advogado OAB/PR 123.327{' '}
-            </TextName>
-            <TextBiography>
-              Advogado, graduado em direito pela
-              <br /> Universidade Estadual de Ponta Grossa,
-              <br /> com anos de experiência em advocacia
-              <br /> cível e empresarial.
-            </TextBiography>
-          </div>
-        </div>
-        <Line />
-      </Section>
       <Section id="contato">
         <Title>ENTRE EM CONTATO</Title>
         <ContactCard>
           <Label>Nome</Label>
-          <Input placeholder="Digite seu nome" type="text" />
+          <Input
+            placeholder="Digite seu nome"
+            type="text"
+            name="name"
+            required
+          />
           <Label>Telefone</Label>
-          <Input placeholder="Digite seu telefone" type="number" />
+          <Input
+            placeholder="Digite seu telefone"
+            type="number"
+            name="phone"
+            required
+          />
           <Label>E-mail</Label>
-          <Input placeholder="Digite seu e-mail" type="email" />
+          <Input
+            placeholder="Digite seu e-mail"
+            type="email"
+            name="email"
+            required
+          />
           <Label>Mensagem</Label>
-          <TextArea placeholder="Digite sua mensagem" />
-          <Button>
+          <TextArea placeholder="Digite sua mensagem" name="message" required />
+          <Button type="submit">
             <p>ENVIAR</p>
           </Button>
         </ContactCard>
@@ -175,7 +173,6 @@ function App() {
           <h1>MENU</h1>
           <a href="#sobre-nos">Sobre nós</a>
           <a href="#areas-de-atuacao">Áreas de atuação</a>
-          <a href="#equipe">Equipe</a>
           <a href="#contato">Contato</a>
         </ContactDiv>
         <ContactDiv>
@@ -184,17 +181,9 @@ function App() {
             <Icon icon={faPhone} />
             <p>(42) 3223-7728</p>
           </a>
-          <a href="mailto:adrianmanjinski@gmail.com">
+          <a href="mailto:moraesadvpg@gmail.com">
             <Icon icon={faEnvelope} />
-            <p>adrianmanjinski@gmail.com</p>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/adrianmajinskimoraes/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Icon icon={faLinkedin} onClick={goToLinkedin} />
-            <p>/adrianmajinskimoraes</p>
+            <p>moraesadvpg@gmail.com</p>
           </a>
         </ContactDiv>
         <div>
