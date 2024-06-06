@@ -9,8 +9,12 @@ export const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 10;
   img {
     margin-left: 64px;
+    @media screen and (max-width: 460px) {
+      margin-left: 0px;
+    }
   }
 `;
 
@@ -25,8 +29,22 @@ export const Contact = styled.div`
 
 export const ContactText = styled.p`
   color: #fff;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+`;
+
+export const WhatsappIcon = styled(FontAwesomeIcon)`
+  color: #fff;
+  font-size: 24px;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const MenuDiv = styled.div`
@@ -39,6 +57,9 @@ export const TextMenu = styled.p`
   color: #fff;
   font-weight: 400;
   font-size: 24px;
+  @media (max-width: 460px) {
+    display: none;
+  }
 `;
 
 export const HamburguerMenu = styled.div<{ open?: boolean }>`
@@ -75,8 +96,7 @@ export const HamburguerMenu = styled.div<{ open?: boolean }>`
 
 export const Menu = styled.div`
   transition: all 0.3s linear;
-  margin-left: 69%;
-  top: 60px;
+  top: 90px;
   right: 10%;
   display: flex;
   align-items: center;
@@ -84,24 +104,45 @@ export const Menu = styled.div`
   background-color: #5d2417;
   width: 20%;
   padding: 12px;
+  z-index: 100;
+
+  @media (max-width: 760px) {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+  }
 `;
 
-export const List = styled.ul``;
+export const List = styled.ul`
+  text-decoration: none;
+`;
 
 export const ListItem = styled.li`
+  cursor: pointer;
   margin-top: 6px;
+  margin-right: 24px;
   color: #fff;
   font-weight: 400;
   font-size: 16px;
   text-align: center;
   list-style-type: none;
+
+  @media (max-width: 760px) {
+    margin: 12px 0;
+  }
 `;
 
 export const BackgroundImage = styled.div`
   position: relative;
-  width: 100%;
   img {
-    margin-top: 60px;
+    margin-top: 90px;
     width: 100%;
     height: auto;
     display: block;
@@ -114,6 +155,9 @@ export const BackgroundImage = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media (max-width: 460px) {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -125,6 +169,10 @@ export const Section = styled.div`
   margin-right: 64px;
   img {
     margin-right: auto;
+  }
+  @media (max-width: 460px) {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 `;
 
@@ -159,9 +207,18 @@ export const Line = styled.div`
   background-color: #320000;
 `;
 
-export const CardsDiv = styled.div`
-  display: flex;
-  flex-direction: row;
+export const CardsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 24px;
+
+  @media screen and (min-width: 760px) {
+    grid-template-columns: repeat(2, minmax(190px, 1fr));
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(190px, 1fr));
+  }
 `;
 
 export const Card = styled.div`
@@ -183,9 +240,12 @@ export const Card = styled.div`
     font-weight: 700;
     text-align: center;
   }
+  @media screen and (max-width: 760px) {
+    margin: 8px;
+  }
 `;
 
-export const ContactCard = styled.div`
+export const ContactCard = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,6 +277,7 @@ export const TextArea = styled.textarea`
   background-color: #fff;
   padding: 12px;
   height: 80px;
+  resize: none;
 `;
 
 export const Button = styled.button`
@@ -258,6 +319,9 @@ export const Footer = styled.div`
     font-weight: 400;
     font-size: 16px;
   }
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
@@ -279,6 +343,9 @@ export const FooterRights = styled.div`
     font-weight: 700;
     font-size: 16px;
   }
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const ContactDiv = styled.div`
@@ -290,5 +357,11 @@ export const ContactDiv = styled.div`
   }
   p {
     margin-left: 12px;
+  }
+  @media screen and (max-width: 720px) {
+    margin-left: 24px;
+    h1 {
+      margin-top: 12px;
+    }
   }
 `;

@@ -9,7 +9,9 @@ export function Modal({ setModalOpen }: ModalProps) {
   return (
     <Background>
       <ModalContent>
-        <ModalText>E-mail enviado com sucesso!</ModalText>
+        <ModalText>
+          E-mail enviado com sucesso! Logo nossa equipe entrará em contato.
+        </ModalText>
         <CloseButton onClick={() => setModalOpen(false)}>Fechar</CloseButton>
       </ModalContent>
     </Background>
