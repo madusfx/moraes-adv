@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3030
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://moraes-adv.vercel.app/',
   optionsSuccessStatus: 200
 }));
 app.use(express.json());
