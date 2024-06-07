@@ -9,6 +9,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   register: UseFormRegister<FormValues>;
   errorMessage?: string;
   value?: string;
+  placeholder: string;
 }
 
 export function InputComponent({
@@ -17,11 +18,12 @@ export function InputComponent({
   register,
   errorMessage,
   value,
+  placeholder
 }: InputProps) {
   return (
     <>
       <Input
-        placeholder="Digite seu nome"
+        placeholder={placeholder}
         value={value}
         type={type}
         {...register(name, { required: true })}

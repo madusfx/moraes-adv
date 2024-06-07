@@ -199,6 +199,7 @@ function App() {
             <ContactCard onSubmit={handleSubmit(onSubmit)}>
               <Label>Nome</Label>
               <InputComponent
+                placeholder="Digite seu nome"
                 name="name"
                 type="text"
                 register={register}
@@ -206,6 +207,7 @@ function App() {
               />
               <Label>Telefone</Label>
               <InputComponent
+                placeholder="Digite seu telefone"
                 name="phone"
                 type="number"
                 register={register}
@@ -213,6 +215,7 @@ function App() {
               />
               <Label>E-mail</Label>
               <InputComponent
+                placeholder="Digite seu e-mail"
                 name="email"
                 type="text"
                 register={register}
