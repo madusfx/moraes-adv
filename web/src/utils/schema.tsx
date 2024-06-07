@@ -1,7 +1,6 @@
 import * as yup from 'yup';
 
-const phoneRegExp =
-  /^(?:(?:(?:\+|00)?(55)\s?)?(?:\(?(\d{2})\)?[-.\s]?)?)?(9\d{4})[-.\s]?(\d{4})$/;
+const phoneRegExp = /^\(\d{2}\) \d{5}-\d{4}$/;
 
 export const schema = yup.object().shape({
   name: yup.string().required('O campo nome é obrigatório.'),

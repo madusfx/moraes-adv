@@ -214,7 +214,7 @@ function App() {
               <InputComponent
                 placeholder="Digite seu telefone"
                 name="phone"
-                type="number"
+                type="text"
                 register={register}
                 errorMessage={errors.phone?.message}
               />

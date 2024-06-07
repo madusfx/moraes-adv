@@ -1,5 +1,5 @@
 import { InputHTMLAttributes } from 'react';
-import { Input, ErrorText } from './styles';
+import { Input, ErrorText, InputMask } from './styles';
 import { Path, UseFormRegister } from 'react-hook-form';
 import { FormValues } from '../../App';
 
@@ -22,12 +22,22 @@ export function InputComponent({
 }: InputProps) {
   return (
     <>
-      <Input
-        placeholder={placeholder}
-        value={value}
-        type={type}
-        {...register(name, { required: true })}
-      />
+      {name === 'phone' ? (
+        <InputMask
+          mask={'(99) 99999-9999'}
+          placeholder={placeholder}
+          value={value}
+          type={type}
+          {...register(name, { required: true })}
+        />
+      ) : (
+        <Input
+          placeholder={placeholder}
+          value={value}
+          type={type}
+          {...register(name, { required: true })}
+        />
+      )}
       <ErrorText>{errorMessage}</ErrorText>
     </>
   );
