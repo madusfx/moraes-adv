@@ -102,7 +102,7 @@ function App() {
   return (
     <>
       {modalOpen && <Modal setModalOpen={setModalOpen} />}
-      <div className="App">
+      <div className="App" id="header">
         <div
           style={{
             display: 'flex',
