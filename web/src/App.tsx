@@ -139,10 +139,15 @@ function App() {
         {menuOpen && (
           <Menu>
             <List>
-              <ListItem>SOBRE NÓS</ListItem>
-              <ListItem>ÁREAS DE ATUAÇÃO</ListItem>
-              <ListItem>EQUIPE</ListItem>
-              <ListItem>CONTATO</ListItem>
+              <ListItem>
+                <a href="#sobre-nos">SOBRE NÓS</a>
+              </ListItem>
+              <ListItem>
+                <a href="#areas-de-atuacao">ÁREAS DE ATUAÇÃO</a>
+              </ListItem>
+              <ListItem>
+                <a href="#contato">CONTATO</a>
+              </ListItem>
             </List>
           </Menu>
         )}

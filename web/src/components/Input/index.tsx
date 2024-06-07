@@ -18,7 +18,7 @@ export function InputComponent({
   register,
   errorMessage,
   value,
-  placeholder
+  placeholder,
 }: InputProps) {
   return (
     <>

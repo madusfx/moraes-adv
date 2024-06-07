@@ -108,7 +108,7 @@ export const HamburguerMenu = styled.div<{ open?: boolean }>`
 `;
 
 export const Menu = styled.div`
-  position: absolute;
+  position: fixed;
   top: 90px;
   right: 0;
   background-color: #5d2417;
@@ -144,11 +144,14 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   cursor: pointer;
   margin: 12px 0;
-  color: #fff;
   font-weight: 400;
   font-size: 16px;
   text-align: center;
   list-style-type: none;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 
   @media (max-width: 760px) {
     margin: 12px 0;
