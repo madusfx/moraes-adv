@@ -1,5 +1,4 @@
 import { FormProvider, useForm } from 'react-hook-form';
-import axios from 'axios';
 import { yupResolver } from '@hookform/resolvers/yup';
 import {
   Section,
@@ -37,6 +36,7 @@ import { schema } from './utils/schema';
 import { InputComponent } from './components/Input';
 import { useState } from 'react';
 import { Modal } from './components/Modal';
+import api from './utils/api';
 
 export type FormValues = {
   name: string;
@@ -71,8 +71,8 @@ function App() {
       email: data.email,
       message: data.message,
     };
-    axios
-      .post('http://localhost:3001/send', payload)
+    api
+      .post('/send', payload)
       .then(function (response) {
         setModalOpen(true);
         console.log(response);
