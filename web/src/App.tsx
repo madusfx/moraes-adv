@@ -27,6 +27,7 @@ import {
   HamburguerMenu,
   WhatsappIcon,
   CardsContainer,
+  HeaderDiv,
 } from './styles';
 import Logo from './images/logo.svg';
 import Background from './images/image-background.jpg';
@@ -116,23 +117,25 @@ function App() {
             <a href="#header">
               <img src={Logo} alt="Logo da advocacia" />
             </a>
-            <MenuDiv>
-              <TextMenu>MENU</TextMenu>
-              <HamburguerMenu open={menuOpen} onClick={handleMenuOpen}>
-                <div />
-                <div />
-                <div />
-              </HamburguerMenu>
-            </MenuDiv>
+            <HeaderDiv>
+              <MenuDiv>
+                <TextMenu>MENU</TextMenu>
+                <HamburguerMenu open={menuOpen} onClick={handleMenuOpen}>
+                  <div />
+                  <div />
+                  <div />
+                </HamburguerMenu>
+              </MenuDiv>
+              <Contact onClick={handleClick}>
+                <WhatsappIcon icon={faWhatsapp} />
+                <ContactText>
+                  CLIQUE PARA
+                  <br /> ENTRAR EM CONTATO
+                  <br /> VIA WHATSAPP
+                </ContactText>
+              </Contact>
+            </HeaderDiv>
           </Header>
-          <Contact onClick={handleClick}>
-            <WhatsappIcon icon={faWhatsapp} />
-            <ContactText>
-              CLIQUE PARA
-              <br /> ENTRAR EM CONTATO
-              <br /> VIA WHATSAPP
-            </ContactText>
-          </Contact>
         </div>
         {menuOpen && (
           <Menu>

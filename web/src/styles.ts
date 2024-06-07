@@ -2,29 +2,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
 export const Header = styled.div`
-  height: 60px;
-  width: 90%;
+  height: 90px;
+  width: 100%;
   background-color: #320000;
-  padding: 16px;
+  padding-left: 16px;
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
   z-index: 10;
   img {
     margin-left: 64px;
+    height: 100%;
     @media screen and (max-width: 460px) {
       margin-left: 0px;
+      height: auto;
     }
   }
 `;
 
+export const HeaderDiv = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  height: 100%;
+`;
+
 export const Contact = styled.div`
-  width: 10%;
+  height: 100%;
   background-color: #5d2417;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  padding: 0 16px;
+  box-sizing: border-box;
 `;
 
 export const ContactText = styled.p`
@@ -32,6 +43,7 @@ export const ContactText = styled.p`
   font-weight: 500;
   font-size: 12px;
   text-align: center;
+  line-height: 1.2;
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -51,6 +63,7 @@ export const MenuDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 16px;
 `;
 
 export const TextMenu = styled.p`
@@ -95,16 +108,16 @@ export const HamburguerMenu = styled.div<{ open?: boolean }>`
 `;
 
 export const Menu = styled.div`
-  transition: all 0.3s linear;
+  position: absolute;
   top: 90px;
-  right: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  right: 0;
   background-color: #5d2417;
   width: 20%;
   padding: 12px;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 760px) {
     position: fixed;
@@ -121,13 +134,16 @@ export const Menu = styled.div`
 `;
 
 export const List = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
   text-decoration: none;
 `;
 
 export const ListItem = styled.li`
   cursor: pointer;
-  margin-top: 6px;
-  margin-right: 24px;
+  margin: 12px 0;
   color: #fff;
   font-weight: 400;
   font-size: 16px;
@@ -326,8 +342,8 @@ export const Footer = styled.div`
 
 export const Icon = styled(FontAwesomeIcon)`
   color: #fff;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
 `;
 
