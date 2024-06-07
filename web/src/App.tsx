@@ -79,10 +79,11 @@ function App() {
       })
       .catch(function (error) {
         console.log(error);
-        alert('Erro ao enviar o e-mail. Por favor, tente novamente mais tarde.');
+        alert(
+          'Erro ao enviar o e-mail. Por favor, tente novamente mais tarde.',
+        );
       });
-  }
-
+  };
 
   function handleMenuOpen() {
     if (menuOpen) {
@@ -100,9 +101,7 @@ function App() {
 
   return (
     <>
-      {modalOpen &&
-        <Modal setModalOpen={setModalOpen} />
-      }
+      {modalOpen && <Modal setModalOpen={setModalOpen} />}
       <div className="App">
         <div
           style={{
@@ -159,14 +158,14 @@ function App() {
           <Title>SOBRE NÓS</Title>
           <Text>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with
-            the release of Letraset sheets containing Lorem Ipsum passages, and
-            more recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum.
+            industry. Lorem Ipsum has been the industrys standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
           </Text>
           <Line />
         </Section>
@@ -224,7 +223,9 @@ function App() {
                 placeholder="Digite sua mensagem"
                 {...register('message')}
               />
-              {errors.message && <p style={{ color: 'white' }}>{errors.message.message}</p>}
+              {errors.message && (
+                <p style={{ color: 'white' }}>{errors.message.message}</p>
+              )}
               <Button type="submit">
                 <p>ENVIAR</p>
               </Button>
@@ -251,7 +252,9 @@ function App() {
           </ContactDiv>
         </Footer>
         <FooterRights>
-          <p>© Moraes Advogados Associados 2024. Todos os direitos reservados</p>
+          <p>
+            © Moraes Advogados Associados 2024. Todos os direitos reservados
+          </p>
           <p>
             Desenvolvido por{'\n'}
             <a
