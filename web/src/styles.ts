@@ -14,7 +14,7 @@ export const Header = styled.div`
   img {
     margin-left: 64px;
     height: 100%;
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 560px) {
       margin-left: 0px;
       height: auto;
     }
@@ -171,7 +171,7 @@ export const BackgroundImage = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @media (max-width: 460px) {
+    @media (max-width: 560px) {
       font-size: 12px;
     }
   }
